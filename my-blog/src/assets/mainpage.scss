@@ -3,8 +3,41 @@ body {
   padding: 0px;
   font-family: Arial, Helvetica, sans-serif;
 }
+header {
+  .icon-menu-nav {
+    float: right;
+  }
 
-.line-break {
-  width: 50%;
-  transform: translate(50%, 0);
+  .line-break {
+    width: 100%;
+  }
+}
+
+//  Post Content
+.main-content {
+  margin-top: 50px;
+  border: 1px gray;
+  border-radius: 2%;
+  box-shadow: 10px 20px 25px grey;
+  height: 100%;
+  text-align: center;
+  .post-control {
+    padding: 20px;
+    img {
+      width: 100%;
+    }
+  }
+}
+
+// footer
+footer {
+  height: 100%;
+  padding: 40px;
+  background-color: #484f58;
+  margin-top: 50px;
+  color: whitesmoke;
+  .icon-blog {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
 }
