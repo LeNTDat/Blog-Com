@@ -16,7 +16,8 @@ import {
 } from "react-icons/fa";
 
 import { AiOutlineMenu, AiOutlineYoutube } from "react-icons/ai";
-const Navbarmenu = () => {
+import Menumodel from "./menumodel";
+const Navbarmenu = (props) => {
     return (
         <>
             <div>
@@ -45,13 +46,17 @@ const Navbarmenu = () => {
                                 </NavLink>
                             </NavItem>
                         </Nav>
+                        {/*  */}
                         <NavbarText className="icon-menu-nav ">
                             <NavLink>
-                                <div class="p-2 bd-highlight">
-                                    <AiOutlineMenu size="1.5em" />
+                                <div className="p-2 bd-highlight">
+                                    <AiOutlineMenu size="1.5em" onClick={props.handleToggle} />
+                                    {/*  transform: rotate(20deg); */}
                                 </div>
                             </NavLink>
                         </NavbarText>
+                        {/* menu */}
+                        {props.isToggle ? <Menumodel /> : ""}
                     </Collapse>
                 </Navbar>
             </div>

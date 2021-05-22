@@ -6,13 +6,29 @@ import Postcontent from "./postcontent";
 import Sloganblog from "./sloganblog";
 
 export default class Mainpage extends React.Component {
+  state = {
+    isToggle: false,
+  };
+
+  handleToggle = () => {
+    this.setState({
+      isToggle: !this.state.isToggle,
+    })
+  }
+
+
+
   render() {
     return (
       <>
+
         {/* header  navbar*/}
         <header >
           {/* menu */}
-          <Navbarmenu />
+          <Navbarmenu
+            handleToggle={this.handleToggle}
+            isToggle={this.state.isToggle}
+          />
           <Sloganblog />
         </header>
         {/* component include content  */}
